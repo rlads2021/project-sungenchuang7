@@ -13,5 +13,4 @@ COVID-19-對台灣國旅的影響
 
 - [投影片](./G25_slides.pdf)
 - [書面報告](./G25_report.pdf)  
-- [專案網站](#若沒有可以拿掉)
-- [Shiny App](#若沒有可以拿掉)
+- [Shiny App](https://trainerblade.shinyapps.io/R_group1_final_project/)
