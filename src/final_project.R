@@ -15,7 +15,7 @@ theme_set(theme)
 for (i in tourist__files) {
     assign(i, readxl::read_excel(
         paste0(
-            "./src/govt_data/20",
+            "./govt_data/20",
             strsplit(i, split = "")[[1]][9],
             strsplit(i, split = "")[[1]][10],
             "_tourist.xlsx"
@@ -312,7 +312,7 @@ apify_input_zh <- c("北港朝天宮", "虎頭山風景特定區",
                     "溪頭自然教育園區", "國立海洋科技博物館", 
                     "國立科學工藝博物館", "獅頭山風景區")
 
-reviews <- readr::read_csv("./src/google_map_reviews.csv")
+reviews <- readr::read_csv("./google_map_reviews.csv")
 
 # 把reviews的名稱裡的"/"改成"_"以便之後使用
 for (i in seq_along(names(reviews))) {
