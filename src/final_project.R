@@ -2,6 +2,13 @@ library(readxl)
 library(tidyverse)
 library(repr)
 
+# system("gdown --id 13kAhQTWmP1yiIvVKqcUv5nPZ_jUqdtOr")
+# system("gdown --id 171iXYT6gZZ2JKVsn8iVHPMpvR0jx1sUS")
+# system("gdown --id 1Z4NSWjwI6MQJS_i8F8kbVjIznDYu-vme")
+
+# 設定路徑
+# setwd("~/Documents/R_group1_final_project")
+
 # 有哪幾個年份的要讀進來
 tourist__files <- c("tourist_18", "tourist_19", "tourist_20")
 
@@ -15,7 +22,7 @@ theme_set(theme)
 for (i in tourist__files) {
     assign(i, readxl::read_excel(
         paste0(
-            "./govt_data/20",
+            "20",
             strsplit(i, split = "")[[1]][9],
             strsplit(i, split = "")[[1]][10],
             "_tourist.xlsx"
@@ -312,7 +319,7 @@ apify_input_zh <- c("北港朝天宮", "虎頭山風景特定區",
                     "溪頭自然教育園區", "國立海洋科技博物館", 
                     "國立科學工藝博物館", "獅頭山風景區")
 
-reviews <- readr::read_csv("./google_map_reviews.csv")
+reviews <- readr::read_csv("google_map_reviews.csv")
 
 # 把reviews的名稱裡的"/"改成"_"以便之後使用
 for (i in seq_along(names(reviews))) {
@@ -349,7 +356,7 @@ for (i in seq(9)) {
 }
 
 # 讀sentiment analysis辭典
-sent <- readr::read_csv("./src/ch.senti.lex.csv")
+sent <- readr::read_csv("ch.senti.lex.csv")
 # 大家一起情緒分析--------------------------------------------------------------
 sentiment_plot <- function(site) {
     # 斷詞
@@ -358,7 +365,7 @@ sentiment_plot <- function(site) {
     seg_site <- tibble(word = segment(nine_spots_reviews[[site]], seg))
     
     # 去掉stopwords
-    stop_words <- readLines("./src/stopwords.txt", encoding = "UTF-8")
+    stop_words <- readLines("stopwords.txt", encoding = "UTF-8")
     stop_df <- tibble(word = stop_words)
     site_remove <- anti_join(seg_site, stop_df)
     
@@ -391,5 +398,3 @@ sentiment_plot <- function(site) {
         theme(text = element_text(family="STHeiti", size=16), legend.position="top") +
         geom_text(color="black", size=4, angle=0, position = position_dodge(1), hjust=-0.5)
 }
-
-
