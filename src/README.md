@@ -2,7 +2,7 @@
 
 # 說明文件
 
-## ** File name -> Its function(s) **
+## ** 檔案名稱 -> 功能和目的 **
 
 ## system_setup.R -> R script to set up fonts
 
