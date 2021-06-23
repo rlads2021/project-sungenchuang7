@@ -14,7 +14,7 @@ ui <- fluidPage(
   # Create a container for tab panels
   tabsetPanel(
       tabPanel(
-      title = "介紹",
+      title = "介紹", icon = icon("map-marked-alt"),
       h3("COVID-19除了影響日常生活，也影響國人旅遊型態"),
       h3("在本報告中，我們將蒐集各觀光景點在疫情前後的造訪人次資料、Google評論"),
       h3("以上述資料找出各觀光景點成長幅度，並以情緒分析找出影響成長幅度多寡的原因"),
@@ -24,7 +24,7 @@ ui <- fluidPage(
       
     # Create a "Plot" tab
     tabPanel(
-      title = "各景點每月遊歷人數（2018 - 2020）",
+      title = "各景點每月遊歷人數（2018 - 2020）", icon = icon("chart-bar"),
       searchInput("place",
                   label = "輸入一個觀光景點(包含片面字詞 / regex)",
                   placeholder = "例: 日月潭, 墾丁, 遊樂園, Zoo",
@@ -36,13 +36,13 @@ ui <- fluidPage(
       ), 
     # Create "Table" tab
     tabPanel(
-      title = "各景點人數成長率",
+      title = "各景點人數成長率", icon = icon("sort-amount-up-alt"),
       selectInput("period", "請選擇時間區段", choices = c("全年度", "暑假（7-8月)", "春假（3-4月)")),
       selectInput("year", "請選擇年份", choices = c("2018-2019", "2019-2020")),
       DT::dataTableOutput("growth")
     ),
     tabPanel(
-      title = "成長率前十大景點 Google評論情緒分析",
+      title = "成長率前十大景點 Google評論情緒分析", icon = icon("language"),
       selectInput("site", "請選擇景點", choices = c("北港朝天宮", "虎頭山風景特定區", 
                                                "日月潭風景區", "新竹漁港", 
                                                "鹿野高臺", "六福村主題遊樂園", 
@@ -51,7 +51,7 @@ ui <- fluidPage(
       plotOutput("sentimentplot")
     ),
     tabPanel(
-      title = "結論 / 資料來源",
+      title = "結論 / 資料來源", icon = icon("info-circle"),
       h4("在疫情爆發年（2020），台灣實施嚴格邊境管制，以致國際觀光客無法自由往來，使國內3-4月"), 
       h4("各觀光景點造訪人次大幅流失。然而隨國內疫情平穩及政府推出的安心旅遊補助政策，國內各大"), 
       h4("景點除了恢復觀光熱潮，更相較前兩年呈現大幅的觀光成長。其中室外景點的成長幅度又高於室"),
