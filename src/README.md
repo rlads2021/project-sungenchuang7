@@ -4,11 +4,11 @@
 
 ## ** 檔案名稱 -> 功能和目的 **
 
-## system_setup.R -> R script to set up fonts
+## system_setup.R -> 設定字體用
 
-## final_project.R -> Main R script to clean, tidy and wrangle our data and create client functions, with which the clients will be able to retrieve information as their liking. This contains some test output.
+## final_project.R -> 主要程式碼，包含清理、整理資料、匯入爬蟲資料、Sentiment Analysis等
 
-## app.R -> R script to create our Shiny web application
+## app.R -> Creates Shiny Web Application.
 
 
 
