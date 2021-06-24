@@ -11,6 +11,6 @@ COVID-19-對台灣國旅的影響
 
 ## 連結
 
-- [投影片](./G25_slides.pdf)
+- [投影片](https://github.com/rlads2021/project-sungenchuang7/blob/master/G01_slides.pdf)
 - [書面報告](https://github.com/rlads2021/project-sungenchuang7/blob/master/G01_report.pdf)  
 - [Shiny App](https://trainerblade.shinyapps.io/R_group1_final_project/)
